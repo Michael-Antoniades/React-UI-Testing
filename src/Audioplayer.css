@@ -1,0 +1,356 @@
+.Audioplayer {
+    --primary: #782bcd;
+    --secondary: orangered;
+    z-index:1;
+    display: flex;
+    background: none;
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    justify-self: center;
+    text-decoration: none;
+    color: white;
+    z-index: 0;
+  }
+
+.forwardbackward {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.forwardbackward:hover {
+    color: var(--primary)
+}
+
+.playpause {
+   background: #fcff00;
+   border: none;
+   border-radius: 50%;
+   width: 75px;
+   height: 75px; 
+   font-size: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.play {
+    position: relative;
+    left: 2px;
+    z-index: 0;
+}
+.pause {
+    position: relative;
+    z-index: 0;
+    
+}
+
+/* Safari styling */
+.progressbar::-webkit-slider-runnable-track {
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+/* Firefox styling */
+.progressbar::-moz-range-track {
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.progressbar::-moz-focus-outer{
+    border:0;
+}
+
+/* progress bar safari and chrome */
+.progressbar::before {
+    content: '';
+    height: 11px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* progressbar firefox */
+.progressbar::-moz-range-progress {
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 11px;
+}
+
+/* knobby - chrome and safari */
+.progressbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border:none;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 0;
+    box-sizing: border-box;
+}
+
+.progressbar:active::-webkit-slider-thumb{
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}
+
+/* knobby firefox */
+.progressbar::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border:transparent;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+}
+
+.progressbar:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}
+
+.songPhotoContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* .songPhoto {
+    position: absolute;
+    border-radius: 4%;
+    display: block;
+    height: 200px;
+        top: 50%;
+        text-decoration: none;
+        transform: translate(0%, -18rem);
+        justify-content: center;
+        align-items: center;
+} */
+.songPhoto {
+    display: flex;
+    background-size: cover;
+    border-radius: 1%;
+    height: 200px;
+    width: 300px;
+    text-decoration: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: -232px;
+    }
+
+    .songPhoto.s3 {
+        transform: translate(-5%, -1rem);
+    }
+
+
+.duration {
+    font-family: monospace;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 160%;
+    left: 110%;
+    font-family: 'gotham.md';
+}
+.currenttime {
+    font-family: monospace;
+    font-size: 16px;
+    color: black;
+    background: none;
+    position: absolute;
+    top: 160%;
+    left: -38%;
+    text-decoration: none;
+    font-family: 'gotham.md';
+
+}
+
+.currentlyPlaying {
+font-size: 1.89rem;
+width:100%;
+border: none;
+ background: none;
+ position: absolute;
+ display: flex;
+bottom: 0;
+ text-decoration: none;
+ color: #782bcd;
+font-family: "Univers LT W01_67 Bold_1476016",Helvetica,Arial,sans-serif;
+ width: 40vh;
+ text-align: center;
+ display: inline-block;
+ letter-spacing: 0.5px; 
+ padding: 0;
+ transform: translate(0,175px)
+}
+.songsLeft{
+    font-size: 1.89rem;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    transform: translate(-6%, 10rem);
+    color: #782bcd;
+    font-family: 'gotham.md';
+    width: 100vh; 
+}
+
+/* .progressBarContainer {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute;
+    display: inline-block;
+} */
+
+.progressbar {
+ --bar-bg: #782bcd;
+--seek-before-width: 0;
+ --seek-before-color: orange;
+ --knobby:     blue;
+ --selectedKnobby: cyan;
+
+ appearance: none;
+ background: var(--bar-bg);
+ border-radius: 0;
+ position: relative;
+ /* width: 100%; */
+ height: 11px;
+ outline: none;
+
+ font-size: 2rem;
+ background: none;
+ position: absolute;
+ justify-content: center;
+ align-items:center;
+ text-decoration: none;
+ color: white;
+ top: 105px;
+ width: 175%;
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .Audioplayer {
+        transform: translate(0, 0px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Audioplayer {
+        transform: translate(0, 0px);
+    }
+
+
+
+    .forwardbackward {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        justify-content: center;
+        left: 0%;
+        
+    }
+    
+    .forwardbackward:hover {
+        color: var(--primary)
+    }
+    
+    .playpause {
+       background: #fcff00;
+       border: none;
+       border-radius: 100%;
+       width: 75px;
+       height: 75px; 
+       font-size: 30px;
+       opacity:0.8;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       /* transform: translate(0%,0%); */
+       
+    }
+    
+    .play {
+        position: relative;
+        left: 2px;
+        z-index:1;
+        
+    }
+    .pause {
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    .currentlyPlaying {
+        font-size: 1.89rem;
+        width:100%;
+        border: none;
+     background: none;
+     position: absolute;
+     display: flex;
+    bottom: 0;
+     text-decoration: none;
+     color: #782bcd;    
+     font-family: "Univers LT W01_67 Bold_1476016",Helvetica,Arial,sans-serif;
+     width: 30vh;
+     text-align: center;
+     display: inline-block;
+     letter-spacing: 0.5px; 
+     padding: 0;
+     transform: translate(0,175px)
+    }
+
+
+  
+}    
+
+@media screen and (max-width: 750px) {
+    .Audioplayer {
+            transform: translate(0, 40px);
+        }
+
+        .songPhoto {
+            height: 150px;
+            width: 200px;
+        }
+}
