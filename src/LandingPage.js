@@ -10,7 +10,7 @@ function LandingPage() {
 
     return (
         <>
-        <MainSec />
+        {/* <MainSec /> */}
         <AudioPlayer />
         </>
 

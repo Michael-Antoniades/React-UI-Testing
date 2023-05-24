@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 //useMemo?
-import { useLocation } from 'react-router-dom';
+
 
 import './Audioplayer.css';
 import {IoMdSkipBackward} from 'react-icons/io'
@@ -229,7 +229,10 @@ function URLChecker() {
     }
 }
 
-let location = useLocation();
+// let location = useLocation();
+let location = 'potato';
+
+
 useEffect(() => { //function checks everytime we want to see if we want to go to the next song, or navigated pages to un-render audioplayer
     if ( calculateTime(currentTime) === calculateTime(duration)) {
         SkipSong(true);  
