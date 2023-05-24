@@ -4,10 +4,15 @@ import React from 'react';
 import LandingPage from './LandingPage'
 
 function App() {
+  
+  
+  
   return (
+    <>
     <Router>
     <Route path ="/" component = {LandingPage}/>
    </Router>
+   </>
 
   );
 }

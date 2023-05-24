@@ -10,11 +10,8 @@ function LandingPage() {
 
     return (
         <>
-
-
         <MainSec />
         <AudioPlayer />
-
         </>
 
     );
