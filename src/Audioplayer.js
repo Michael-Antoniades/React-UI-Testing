@@ -298,6 +298,21 @@ useEffect(() => { //function checks everytime we want to see if we want to go to
             
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
     )

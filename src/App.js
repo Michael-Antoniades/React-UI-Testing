@@ -6,12 +6,12 @@ import LandingPage from './LandingPage'
 function App() {
   
     return (
-      <>
-
-  
-            <LandingPage/>
-
-      </>
+<Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />}>
+      </Route>
+    </Routes>
+  </Router>
     );
 }
 
