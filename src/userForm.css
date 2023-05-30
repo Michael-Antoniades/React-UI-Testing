@@ -1,0 +1,146 @@
+.containerUpload {
+    
+}
+
+/* // #782bcd #fcff00 #00afff #ffa700 */
+
+.uploadMenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+    justify-content: top;
+    transition: all 0.5s ease;
+    /* flex-direction: column;  */
+   background: whitesmoke;
+   font-family: "Univers LT W01_67 Bold_1476016",Helvetica,Arial,sans-serif;
+   letter-spacing: 1px;
+  }
+
+.fieldContainer {
+    width: 50%;
+}
+
+.fileContainer{
+    width: 50%;
+    display:flex;
+    flex-direction: row;
+    
+}
+  
+.uploadForm {
+      /* position: absolute;
+      justify-content: flex-end; */
+      /* width: 100%;
+      padding-bottom: 5%; */
+      /* padding-right:50%;
+      padding-left: 10%; */
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
+
+  .uploadTitle {
+    width: 50%;
+    justify-content: center; 
+    display: flex;
+    font-size: 26px;
+    height: 50px;
+    margin-top: 15%;
+      
+  }
+
+  .trackInput {
+    
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 100)
+}
+
+.artistInput {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 100)
+}
+.tagInput {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 100)
+}
+.genreInput {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 100)
+}
+
+.bpmInput {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 100)
+}
+
+.scaleInput {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 28px;
+    background: rgb(255, 255, 100)
+}
+
+
+.uploadButton {
+    background: rgb(255, 255, 100);
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px 8px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3%;
+    position: relative;
+    letter-spacing: 1px;
+    width: 50%;
+    justify-content: center;
+
+}
+
+.songInput {
+width:50%;
+height: 100%;
+text-align: center;
+}
+
+.imgInput {
+width:50%;
+height: 100%;
+text-align: center;
+}
+
+.imgHolder {
+   stroke-width: -1px;
+
+}
+
+#musicUpload {
+    margin-left: 20%;
+    margin-bottom: 42px;
+}
+
+#imgUpload {
+margin-left: 20%;
+}
